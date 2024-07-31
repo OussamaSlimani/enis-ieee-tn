@@ -143,17 +143,17 @@ require "views/home/components/header.php";
 
 
 <!-- ========== Tec Week Counter Start ========== -->
-<div class="container p-4 rounded-4 text-white wow fadeIn space-bg" data-wow-delay="0.2s">
+<div class="container p-4 rounded-4 text-white space-bg wow fadeInUp">
   <div class="row g-4">
     <!-- Event Details Section -->
     <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center text-center">
-      <div class="pb-4 wow fadeIn img-mode" data-wow-delay="0.5s">
-        <img src="assets\tecweek\tecweek.png" alt="TEC Week Logo" class="img-fluid" />
+      <div class="pb-4 wow zoomIn" data-wow-delay="0.5s">
+        <img src="assets/tecweek/tecweek.png" alt="TEC Week Logo" class="img-fluid" />
       </div>
-      <p class="text-white text-justify mb-4">
+      <p class="text-white text-justify mb-4 wow fadeInUp" data-wow-delay="1s">
         Join us for "TEC Week 1.0" on September 21st and 22nd, 2024! This annual technical congress, organized by IEEE ENIS AESS, SSCS, CASS, and PES SBCs, starts with online workshops and sessions and peaks over the weekend.
       </p>
-      <div id="counter" class="counter d-flex justify-content-center align-items-center text-center p-3 my-2">
+      <div id="counter" class="counter d-flex justify-content-center align-items-center text-center p-3 my-2 wow fadeInUp" data-wow-delay="1.5s">
         <div class="mx-2">
           <span id="days" class="d-block display-4 fw-bold" style="min-width: 80px;">00</span>
           <span>Days</span>
@@ -171,7 +171,7 @@ require "views/home/components/header.php";
           <span>Seconds</span>
         </div>
       </div>
-      <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center wow fadeInUp" data-wow-delay="2s">
         <a class="me-3" href="https://www.facebook.com/profile.php?id=61561401374924" target="_blank">
           <i class="fab fa-facebook-f fa-2x text-white p-2 rounded-circle"></i>
         </a>
@@ -181,24 +181,25 @@ require "views/home/components/header.php";
       </div>
     </div>
     <!-- Game Promotion Section -->
-    <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
+    <div class="col-lg-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.5s">
       <div class="p-4 bg-dark rounded-4">
         <div class="position-relative pb-3 mb-3">
           <h2 class="mb-0 text-white display-5">Save the Earth with Groot!</h2>
         </div>
-        <div class="pb-4 wow fadeIn img-mode" data-wow-delay="0.5s">
+        <div class="pb-4">
           <img src="assets/tecweek/game.png" height="450" alt="Groot Adventure" class="img-fluid" />
         </div>
         <p class="text-white text-justify mb-4">
           Join Groot on a thrilling adventure to protect Earth from space rocks! Play now and become a hero.
         </p>
-        <a class="btn btn-primary rounded-pill py-2 px-4 mb-3" href="index.php?url=game" target="_blank">Play the Game</a>
+        <a class="btn btn-primary rounded-pill py-2 px-4 mb-3 wow rubberBand" data-wow-delay="3s" href="index.php?url=game" target="_blank">Play the Game</a>
       </div>
     </div>
     <!-- Game Promotion Section -->
   </div>
 </div>
 <!-- ========== Tec Week Counter End ========== -->
+
 
 <!-- ========== About Start ========== -->
 <div class="container-xxl rounded-4 bg-light-mode border wow fadeIn mt-4" data-wow-delay="0.2s">

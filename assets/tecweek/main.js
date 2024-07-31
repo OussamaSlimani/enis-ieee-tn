@@ -45,6 +45,29 @@ setTimeout(function () {
   function addAsteroid() {
     var a = document.createElement("div");
     a.className = "asteroid";
+
+    // Randomly determine which side the asteroid will appear from
+    var side = Math.floor(Math.random() * 4);
+    switch (side) {
+      case 0: // From the top
+        a.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+        a.style.top = "-100px";
+        break;
+      case 1: // From the bottom
+        a.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+        a.style.top = window.innerHeight + "px";
+        break;
+      case 2: // From the left
+        a.style.left = "-100px";
+        a.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+        break;
+      case 3: // From the right
+        a.style.left = window.innerWidth + "px";
+        a.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+        break;
+    }
+
+    // Randomize the border-radius for the asteroid shape
     a.style.borderRadius =
       randomCorner() +
       " " +
@@ -53,8 +76,7 @@ setTimeout(function () {
       randomCorner() +
       " " +
       randomCorner();
-    a.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
-    a.style.top = Math.random() < 0.5 ? window.innerHeight + "px" : "-100px";
+
     document.body.appendChild(a);
   }
 

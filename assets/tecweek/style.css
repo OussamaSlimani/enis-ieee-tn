@@ -129,6 +129,13 @@ body {
   z-index: -1;
 }
 
+@media (max-width: 600px) {
+  .asteroid {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 @keyframes roll {
   100% {
     transform: rotate(360deg);
