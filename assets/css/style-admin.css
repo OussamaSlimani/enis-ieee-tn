@@ -1,0 +1,270 @@
+/*=============== Template CSS ===============*/
+:root {
+  --primary: #005b98;
+  --gray: #f6f7f8;
+  --secondary: #267cbd;
+  --light: #eef9ff;
+  --dark: #091e3e;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/*=============== Button ===============*/
+.btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #ffffff;
+  box-shadow: inset 0 0 0 50px transparent;
+}
+
+.btn-primary:hover {
+  box-shadow: inset 0 0 0 0 var(--primary);
+}
+
+.btn-secondary:hover {
+  box-shadow: inset 0 0 0 0 var(--secondary);
+}
+
+.btn-square {
+  width: 36px;
+  height: 36px;
+}
+
+.btn-sm-square {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+
+/* =============== Spinner =============== */
+
+.spinner {
+  --star-inactive: #c2c3c4;
+  --star-active: #005b98;
+}
+
+.spinner svg polygon {
+  fill: var(--star-inactive);
+  animation: change 2s infinite;
+}
+
+.spinner svg polygon:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.spinner svg polygon:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.spinner svg polygon:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes change {
+  0% {
+    fill: var(--star-inactive);
+  }
+  30% {
+    fill: var(--star-active);
+  }
+  100% {
+    fill: var(--star-inactive);
+  }
+}
+
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+/*** Layout ***/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--gray);
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.content {
+  margin-left: 250px;
+  min-height: 100vh;
+  background: #ffffff;
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    margin-left: 0;
+  }
+
+  .sidebar.open {
+    margin-left: -250px;
+  }
+
+  .content {
+    width: calc(100% - 250px);
+  }
+
+  .content.open {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    margin-left: -250px;
+  }
+
+  .sidebar.open {
+    margin-left: 0;
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/*** Navbar ***/
+.sidebar .navbar .navbar-nav .nav-link {
+  padding: 7px 20px;
+  color: var(--dark);
+  font-weight: 500;
+  border-left: 3px solid var(--light);
+  border-radius: 0 30px 30px 0;
+  outline: none;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link.active {
+  color: var(--primary);
+  background: #ffffff;
+  border-color: var(--primary);
+}
+
+.sidebar .navbar .navbar-nav .nav-link i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 40px;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover i,
+.sidebar .navbar .navbar-nav .nav-link.active i {
+  background: var(--light);
+}
+
+.sidebar .navbar .dropdown-toggle::after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+.sidebar .navbar .dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(-180deg);
+}
+
+.sidebar .navbar .dropdown-item {
+  padding-left: 25px;
+  border-radius: 0 30px 30px 0;
+}
+
+.content .navbar .navbar-nav .nav-link {
+  margin-left: 25px;
+  padding: 12px 0;
+  color: var(--dark);
+  outline: none;
+}
+
+.content .navbar .navbar-nav .nav-link:hover,
+.content .navbar .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+.content .navbar .sidebar-toggler,
+.content .navbar .navbar-nav .nav-link i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 40px;
+}
+
+.content .navbar .dropdown-toggle::after {
+  margin-left: 6px;
+  vertical-align: middle;
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+.content .navbar .dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(-180deg);
+}
+
+@media (max-width: 575.98px) {
+  .content .navbar .navbar-nav .nav-link {
+    margin-left: 15px;
+  }
+}
+
+/* *** **/
+.hidden {
+  display: none;
+}
