@@ -1,5 +1,5 @@
 <?php
-require "app/views/members/components/header.php";
+require "views/members/components/header.php";
 ?>
 
 <!-- ===================== header Start ===================== -->
@@ -24,7 +24,7 @@ require "app/views/members/components/header.php";
 
 <!-- ===================== members Start ===================== -->
 <?php
-$membersPerPage = 30;
+$membersPerPage = 50;
 $totalMembers = count($members);
 $totalPages = ceil($totalMembers / $membersPerPage);
 $page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
@@ -117,5 +117,5 @@ $currentMembers = array_slice($members, $start, $membersPerPage);
 
 
 <?php
-require "app/views/members/components/footer.php";
+require "views/members/components/footer.php";
 ?>

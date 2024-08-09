@@ -1,5 +1,5 @@
 <?php
-require "app/views/members/components/header.php";
+require "views/members/components/header.php";
 ?>
 
 <!-- ===================== header Start ===================== -->
@@ -107,5 +107,5 @@ require "app/views/members/components/header.php";
 <!-- ===================== add members End ===================== -->
 
 <?php
-require "app/views/members/components/footer.php";
+require "views/members/components/footer.php";
 ?>

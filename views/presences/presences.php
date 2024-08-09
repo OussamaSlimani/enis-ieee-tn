@@ -1,5 +1,5 @@
 <?php
-require "app/views/members/components/header.php";
+require "views/members/components/header.php";
 ?>
 
 <!-- ===================== header Start ===================== -->
@@ -12,7 +12,7 @@ require "app/views/members/components/header.php";
                          <ol class="breadcrumb">
                               <li class="breadcrumb-item">Dashboard</li>
                               <li class="breadcrumb-item" aria-current="page">
-                                   List of activities and presences
+                                   List of presences
                               </li>
                          </ol>
                     </nav>
@@ -87,7 +87,7 @@ $currentMembers = array_slice($activities, $start, $membersPerPage);
                               <?php endforeach; ?>
                          <?php else : ?>
                               <tr>
-                                   <td class="text-center" colspan="5">No members found.</td>
+                                   <td class="text-center" colspan="5">No activities found.</td>
                               </tr>
                          <?php endif; ?>
                     </tbody>
@@ -111,5 +111,5 @@ $currentMembers = array_slice($activities, $start, $membersPerPage);
 
 
 <?php
-require "app/views/members/components/footer.php";
+require "views/members/components/footer.php";
 ?>

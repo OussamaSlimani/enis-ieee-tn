@@ -62,10 +62,23 @@ class Model
         }
     }
 
+    public function getPrimaryKey()
+    {
+        try {
+            $stmt = $this->pdo->prepare("SHOW KEYS FROM {$this->table} WHERE Key_name = 'PRIMARY'");
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['Column_name'];
+        } catch (PDOException $e) {
+            die("Failed to get primary key: " . $e->getMessage());
+        }
+    }
+
     public function find($id)
     {
         try {
-            $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE id = ?");
+            $primaryKey = $this->getPrimaryKey();
+            $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE {$primaryKey} = ?");
             $stmt->execute([$id]);
             return $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -73,16 +86,19 @@ class Model
         }
     }
 
+
+
     public function update($id, $data)
     {
         try {
+            $primaryKey = $this->getPrimaryKey();
             $setClause = '';
             foreach ($data as $key => $value) {
                 $setClause .= "{$key} = ?, ";
             }
             $setClause = rtrim($setClause, ', ');
 
-            $stmt = $this->pdo->prepare("UPDATE {$this->table} SET {$setClause} WHERE id = ?");
+            $stmt = $this->pdo->prepare("UPDATE {$this->table} SET {$setClause} WHERE {$primaryKey} = ?");
             $values = array_values($data);
             $values[] = $id;
             $stmt->execute($values);
@@ -97,7 +113,8 @@ class Model
     public function delete($id)
     {
         try {
-            $stmt = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id = ?");
+            $primaryKey = $this->getPrimaryKey();
+            $stmt = $this->pdo->prepare("DELETE FROM {$this->table} WHERE {$primaryKey} = ?");
             $stmt->execute([$id]);
 
             return $stmt->rowCount();
@@ -132,6 +149,63 @@ class Model
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             die("Find by condition failed: " . $e->getMessage());
+        }
+    }
+
+    public function search($conditions = [])
+    {
+        try {
+            $whereClauses = [];
+            $values = [];
+            foreach ($conditions as $key => $value) {
+                if (strpos($key, 'LIKE') !== false) {
+                    $value = "%{$value}%";
+                }
+                $whereClauses[] = $key;
+                $values[] = $value;
+            }
+
+            $whereClause = implode(' AND ', $whereClauses);
+            $sql = "SELECT * FROM {$this->table}";
+
+            if (!empty($whereClause)) {
+                $sql .= " WHERE {$whereClause}";
+            }
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($values);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            die("Search failed: " . $e->getMessage());
+        }
+    }
+
+    public function join($firstTableColumns, $secondTableColumns, $firstColumnJoin, $secondColumnJoin, $secondTable, $joinType = 'INNER')
+    {
+        try {
+            // Prepare the column lists for SELECT clause
+            $table1Cols = implode(', ', array_map(function ($col) {
+                return "{$this->table}.{$col}";
+            }, $firstTableColumns));
+
+            $table2Cols = implode(', ', array_map(function ($col) use ($secondTable) {
+                return "{$secondTable}.{$col}";
+            }, $secondTableColumns));
+
+            // Combine both column lists
+            $columns = "{$table1Cols}, {$table2Cols}";
+
+            // Prepare the JOIN query
+            $sql = "SELECT {$columns} FROM {$this->table} 
+                    {$joinType} JOIN {$secondTable} 
+                    ON {$this->table}.{$firstColumnJoin} = {$secondTable}.{$secondColumnJoin}";
+
+            // Execute the query
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            die("Join failed: " . $e->getMessage());
         }
     }
 }

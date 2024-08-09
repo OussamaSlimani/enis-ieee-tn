@@ -65,7 +65,7 @@ function isActive($urlFragment)
           <div class="sidebar pe-4 pb-3">
                <nav class="navbar bg-light navbar-light">
                     <p class="navbar-brand mx-4 my-2">
-                         <img src="app/views/assets/img/Logo/enis-sb.png" alt="logo-white" style="height: 42px" />
+                         <img src="assets/img/Logo/enis-sb.png" alt="logo-white" style="height: 42px" />
                     </p>
                     <div class="navbar-nav w-100 mt-4">
                          <a href="index.php?url=members" class="nav-item nav-link <?php echo isActive('members'); ?>"><i class="fa fa-tachometer-alt me-2"></i>Active Account</a>
@@ -86,7 +86,7 @@ function isActive($urlFragment)
                          <i class="fa fa-bars"></i>
                     </a>
                     <div class="navbar-nav d-lg-none">
-                         <img src="app/views/assets/img/Logo/enis-sb.png" alt="logo-white" style="height: 42px" />
+                         <img src="assets/img/Logo/enis-sb.png" alt="logo-white" style="height: 42px" />
                     </div>
                     <div class="navbar-nav">
                          <a href="#" class="nav-link">

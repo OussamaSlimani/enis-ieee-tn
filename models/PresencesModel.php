@@ -1,9 +1,9 @@
 <?php
 require_once 'Model.php';
 
-class vToolsEventsModel extends Model
+class PresencesModel extends Model
 {
-     protected $table = 'vToolsEvents';
+     protected $table = 'Presences';
 
      public function __construct()
      {

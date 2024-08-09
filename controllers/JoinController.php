@@ -44,10 +44,11 @@ class JoinController extends Controller
                $department = $_POST['department'];
                if (!empty($email) && !empty($fullname) && !empty($password) && !empty($department)) {
                     $data = [
-                         'email' => $email,
-                         'fullname' => $fullname,
-                         'password' => $password,
-                         'department' => $department
+                         'Email' => $email,
+                         'FullName' => $fullname,
+                         'Password' => $password,
+                         'Department' => $department,
+                         'MembershipStatus' => 'Not Active',
                     ];
                     try {
                          $lastInsertId = $this->JoinModel->create($data);

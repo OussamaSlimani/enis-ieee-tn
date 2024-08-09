@@ -16,7 +16,6 @@ $router->addRoute('game', 'HomeController', 'game');
 $router->addRoute('vtools', 'HomeController', 'vtools');
 $router->addRoute('newsletter', 'HomeController', 'newsletter');
 
-
 // Vtools API
 $router->addRoute('update', 'vToolsEventsController', 'update');
 $router->addRoute('activities', 'vToolsEventsController', 'activities');
@@ -36,43 +35,39 @@ $router->addRoute('logout', 'AuthController', 'logout');
 
 // Members pages
 $router->addRoute('members', 'MembersController', 'active');
-$router->addRoute('create_member', 'ControllerMember', 'create');
-$router->addRoute('store_member', 'ControllerMember', 'store');
-$router->addRoute('search_member', 'ControllerMember', 'search');
-$router->addRoute('edit_member', 'ControllerMember', 'edit');
-$router->addRoute('update_member', 'ControllerMember', 'update');
-$router->addRoute('delete_member', 'ControllerMember', 'delete');
+$router->addRoute('create_member', 'MembersController', 'create');
+$router->addRoute('store_member', 'MembersController', 'store');
+$router->addRoute('search_member', 'MembersController', 'search');
+$router->addRoute('edit_member', 'MembersController', 'edit');
+$router->addRoute('update_member', 'MembersController', 'update');
+$router->addRoute('delete_member', 'MembersController', 'delete');
+$router->addRoute('score', 'MembersController', 'score');
 
-// New Member pages
-$router->addRoute('new_members', 'ControllerMember', 'new_members');
-$router->addRoute('delete_new_member', 'ControllerMember', 'delete_new_member');
-$router->addRoute('search_new_member', 'ControllerMember', 'search_new_member');
-$router->addRoute('payment_new_member', 'ControllerMember', 'payment_new_member');
+$router->addRoute('new_members', 'MembersController', 'new_members');
+$router->addRoute('delete_new_member', 'MembersController', 'delete_new_member');
+$router->addRoute('search_new_member', 'MembersController', 'search_new_member');
+$router->addRoute('payment_new_member', 'MembersController', 'payment_new_member');
 
-// Renew Member pages
-$router->addRoute('renew_members', 'ControllerMember', 'renew_members');
-$router->addRoute('search_renew_member', 'ControllerMember', 'search_renew_member');
-$router->addRoute('payment_renew_member', 'ControllerMember', 'payment_renew_member');
-$router->addRoute('delete_renew_member', 'ControllerMember', 'delete_renew_member');
+$router->addRoute('renew_members', 'MembersController', 'renew_members');
+$router->addRoute('search_renew_member', 'MembersController', 'search_renew_member');
+$router->addRoute('payment_renew_member', 'MembersController', 'payment_renew_member');
+$router->addRoute('delete_renew_member', 'MembersController', 'delete_renew_member');
 
 // Officers
-$router->addRoute('officers', 'ControllerOfficer', 'officers');
-$router->addRoute('delete_officer', 'ControllerOfficer', 'delete_officer');
-$router->addRoute('create_officer', 'ControllerOfficer', 'create_officer');
-$router->addRoute('store_officer', 'ControllerOfficer', 'store_officer');
-$router->addRoute('filter_officers', 'ControllerOfficer', 'filter_officers');
+$router->addRoute('officers', 'OfficersController', 'officers');
+$router->addRoute('delete_officer', 'OfficersController', 'delete_officer');
+$router->addRoute('create_officer', 'OfficersController', 'create_officer');
+$router->addRoute('store_officer', 'OfficersController', 'store_officer');
+$router->addRoute('filter_officers', 'OfficersController', 'filter_officers');
 
-// Scoreboard
-$router->addRoute('score', 'ControllerMember', 'score');
-
-// Presence
-$router->addRoute('presences', 'ControllerPresence', 'presences');
-$router->addRoute('create_activity', 'ControllerPresence', 'create_activity');
-$router->addRoute('store_activity', 'ControllerPresence', 'store_activity');
-$router->addRoute('delete_activity', 'ControllerPresence', 'delete_activity');
-$router->addRoute('mark_presence', 'ControllerPresence', 'mark_presence');
-$router->addRoute('mark_as_present', 'ControllerPresence', 'mark_as_present');
-$router->addRoute('remove_present', 'ControllerPresence', 'remove_present');
-$router->addRoute('search_presence', 'ControllerPresence', 'search_presence');
+// Presences
+$router->addRoute('presences', 'PresencesController', 'presences');
+$router->addRoute('create_activity', 'PresencesController', 'create_activity');
+$router->addRoute('store_activity', 'PresencesController', 'store_activity');
+$router->addRoute('delete_activity', 'PresencesController', 'delete_activity');
+$router->addRoute('mark_presence', 'PresencesController', 'mark_presence');
+$router->addRoute('mark_as_present', 'PresencesController', 'mark_as_present');
+$router->addRoute('remove_present', 'PresencesController', 'remove_present');
+$router->addRoute('search_presence', 'PresencesController', 'search_presence');
 
 return $router;
