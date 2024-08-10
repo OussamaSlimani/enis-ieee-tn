@@ -148,7 +148,7 @@ require "views/home/components/header.php";
     <!-- Event Details Section -->
     <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center text-center">
       <div class="pb-4 wow zoomIn" data-wow-delay="0.5s">
-        <img src="assets/tecweek/tecweek.png" alt="TEC Week Logo" class="img-fluid" />
+        <img src="assets/tecweek/tecweek-2.png" alt="TEC Week Logo" class="img-fluid" style="width: 80%;" />
       </div>
       <p class="text-white text-justify mb-4 wow fadeInUp" data-wow-delay="1s">
         Join us for "TEC Week 1.0" on September 21st and 22nd, 2024! This annual technical congress, organized by IEEE ENIS AESS, SSCS, CASS, and PES SBCs, starts with online workshops and sessions and peaks over the weekend.

@@ -1428,7 +1428,7 @@ h6,
 /* Space background with stars animation */
 .space-bg {
   position: relative;
-  background: url(../tecweek/bg.jpg) no-repeat center center fixed;
+  background: url(../tecweek/bg-01.jpg) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
 }
