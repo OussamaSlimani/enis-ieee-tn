@@ -39,13 +39,13 @@ require "views/home/components/header.php";
       <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
         <h3 class="text-dark">Instructions</h3>
         <p class="text-dark">
-          1. Due to limited payment options (no MasterCard, technology cards, or PayPal), IEEE ENIS SB will handle the payment.<br>
-          2. Follow the tutorial carefully to create the IEEE account.<br>
-          3. After creating your IEEE account, provide us with the email address and password you used.<br>
-          4. We need access to your account for payment processing.<br>
-          5. Please ensure all submitted information is accurate.
-        </p>
+          1. IEEE ENIS SB will handle payment due to limited options (no MasterCard, technology cards, or PayPal).<br>
+          2. Follow the tutorial to create an IEEE account. Once you have done, share your email address with us for payment processing.<br>
+          3. After submitting the form, please make sure to pay the membership fee of 45 DT to the <a href="#sbOfficers" data-bs-toggle="modal" data-bs-target="#sbOfficers">
+            following SB members</a>.
 
+          <br>
+        </p>
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center wow slideInUp" data-wow-delay="0.1s">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/ombVAw4wA3U?si=1vLjqB9FIc2no8hN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -58,12 +58,12 @@ require "views/home/components/header.php";
               <input type="text" id="fullname" name="fullname" class="form-control" required />
             </div>
             <div class="col-12">
-              <label for="email" class="control-label text-dark">Email</label>
+              <label for="email" class="control-label text-dark">Email used for IEEE account</label>
               <input type="email" id="email" name="email" class="form-control" required />
             </div>
             <div class="col-12">
-              <label for="password" class="control-label text-dark">Password</label>
-              <input type="password" id="password" name="password" class="form-control" required />
+              <label for="password" class="control-label text-dark">Password used for IEEE account</label>
+              <input type="text" id="password" name="password" class="form-control" required />
             </div>
             <div class="col-12">
               <label for="department" class="control-label text-dark">Department</label>
@@ -89,8 +89,17 @@ require "views/home/components/header.php";
         </form>
       </div>
     </div>
+    <div class="row pt-5 justify-content-center wow fadeIn" data-wow-delay="0.3s">
+      <div class="col-6 col-lg-2">
+        <a href="index.php?url=step2" class="btn btn-primary rounded-pill d-flex justify-content-center align-items-center">
+          Step 2 <i class="fa fa-arrow-right mx-2"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
+
+
 <!-- ========== Terms and Conditions start ========== -->
 <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -114,7 +123,69 @@ require "views/home/components/header.php";
 </div>
 <!-- ==========  Events section End ========== -->
 
-
+<!-- ========== SB Officers ========== -->
+<div class="modal fade" id="sbOfficers" tabindex="-1" role="dialog" aria-labelledby="sbOfficersLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-light-mode">
+        <h4 class="modal-title text-dark">You can make the payment in person to the following SB members</h4>
+        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times fa-lg text-dark"></i>
+        </button>
+      </div>
+      <div class="modal-body bg-light-mode">
+        <div class="container-fluid py-5">
+          <div class="row g-5 justify-content-center">
+            <!---->
+            <div class="col-lg-3">
+              <div class="position-relative rounded overflow-hidden">
+                <div class="team-item border border-2 bg-light-mode">
+                  <div class="overflow-hidden team-img">
+                    <img class="img-fluid w-100" src="assets/img/team/team-21.jpg" alt="image" />
+                  </div>
+                  <div class="text-center p-2">
+                    <h5 class="text-dark">Mahdi Bradai</h5>
+                    <p class="text-dark">Chairman</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="col-lg-3">
+              <div class="position-relative rounded overflow-hidden">
+                <div class="team-item border border-2 bg-light-mode">
+                  <div class="overflow-hidden team-img">
+                    <img class="img-fluid w-100" src="assets/img/team/team-22.jpg" alt="image" />
+                  </div>
+                  <div class="text-center p-2">
+                    <h5 class="text-dark">Oussama Slimani</h5>
+                    <p class="text-dark">Project Manager</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="col-lg-3">
+              <div class="position-relative rounded overflow-hidden">
+                <div class="team-item border border-2 bg-light-mode">
+                  <div class="overflow-hidden team-img">
+                    <img class="img-fluid w-100" src="assets/img/team/team-25.jpg" alt="image" />
+                  </div>
+                  <div class="text-center p-2">
+                    <h5 class="text-dark">Iheb Charfeddine</h5>
+                    <p class="text-dark">Treasurer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ========== SB Officers ========== -->
 
 
 

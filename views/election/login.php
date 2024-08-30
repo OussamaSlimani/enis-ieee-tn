@@ -3,7 +3,7 @@
 
 <head>
      <meta charset="utf-8" />
-     <title>Admin Space</title>
+     <title>Register Your Candidacy</title>
      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
      <!-- Favicon -->
@@ -45,7 +45,7 @@
                     <form action="index.php?url=login" method="POST">
                          <div class="bg-light border rounded p-4 p-sm-5 my-4 mx-3">
                               <div class="mb-3 text-center">
-                                   <h3 class="text-primary">Admin Space</h3>
+                                   <h3 class="text-dark">Login to Register Your Candidacy</h3>
                               </div>
                               <div class="form-floating mb-3">
                                    <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
@@ -57,7 +57,7 @@
                               </div>
                               <div class="d-flex align-items-center justify-content-between mb-4">
                               </div>
-                              <button type="submit" class="btn btn-primary py-2 w-100 mb-4">Sign In</button>
+                              <button type="submit" class="btn btn-primary py-2 w-100 mb-4">Login</button>
                          </div>
                     </form>
                </div>

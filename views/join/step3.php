@@ -40,10 +40,9 @@ require "views/home/components/header.php";
       <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
         <h3 class="text-dark">Instructions</h3>
         <p class="text-dark">
-          1. This step is optional but highly recommended.<br>
-          2. Follow the tutorial carefully.<br>
-          3. After completing the tutorial, submit the IEEE email, your old email, and password.<br>
-          4. Double-check that the information you submit is correct.
+          1. This step is optional but highly recommended!<br>
+          2. Follow the tutorial to get you IEEE Email address and IEEE Number. <br>
+          3. Once you have done, share your new Email address and IEEE Number with us.<br>
         </p>
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center wow slideInUp" data-wow-delay="0.1s">
@@ -61,18 +60,25 @@ require "views/home/components/header.php";
               <input type="ieeeEmail" id="ieeeEmail" name="ieeeEmail" class="form-control" required />
             </div>
             <div class="col-12">
-              <label for="email" class="control-label text-dark">Old Email</label>
+              <label for="email" class="control-label text-dark">Email used for IEEE account</label>
               <input type="email" id="email" name="email" class="form-control" required />
             </div>
             <div class="col-12">
               <label for="password" class="control-label text-dark">Password</label>
-              <input type="password" id="password" name="password" class="form-control" required />
+              <input type="text" id="password" name="password" class="form-control" required />
             </div>
             <div class="col-12">
               <button class="btn btn-primary w-100 py-2" type="submit">Submit</button>
             </div>
           </div>
         </form>
+      </div>
+    </div>
+    <div class="row pt-5 justify-content-center wow fadeIn" data-wow-delay="0.3s">
+      <div class="col-6 col-lg-2">
+        <a href="index.php?url=step2" class="btn btn-primary rounded-pill d-flex justify-content-center align-items-center">
+          <i class="fa fa-arrow-left mx-2"></i> Step 2
+        </a>
       </div>
     </div>
   </div>

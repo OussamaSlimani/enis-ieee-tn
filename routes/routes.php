@@ -70,4 +70,11 @@ $router->addRoute('mark_as_present', 'PresencesController', 'mark_as_present');
 $router->addRoute('remove_present', 'PresencesController', 'remove_present');
 $router->addRoute('search_presence', 'PresencesController', 'search_presence');
 
+// Presences
+$router->addRoute('election', 'CandidatesController', 'election');
+$router->addRoute('candidates', 'CandidatesController', 'candidates');
+$router->addRoute('delete_election', 'CandidatesController', 'delete_election');
+$router->addRoute('login_election', 'CandidatesController', 'login_election');
+$router->addRoute('form_election', 'CandidatesController', 'form_election');
+
 return $router;

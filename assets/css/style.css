@@ -1432,3 +1432,21 @@ h6,
   background-size: cover;
   overflow: hidden;
 }
+
+/**** election ***/
+.election-box {
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #bfc4c8;
+}
+
+.candidate-container {
+  padding: 3rem;
+}
+
+@media (max-width: 600px) {
+  .candidate-container {
+    padding: 1.5rem;
+  }
+}

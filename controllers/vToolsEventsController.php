@@ -98,7 +98,7 @@ class vToolsEventsController extends Controller
           $threeMonthsAgo->modify('-3 months');
           $threeMonthsAgoISO = $threeMonthsAgo->format('Y-m-d\TH:i:s\Z');
           $url = sprintf(
-               'https://events.vtools.ieee.org/RST/events/api/public/v4/events/list?delta=%s&category_id=2,3&span=%s~now&sort=-created-on&limit=3000',
+               'https://events.vtools.ieee.org/RST/events/api/public/v4/events/list?delta=%s&category_id=2,3&span=%s~now&sort=-created-on&limit=2000',
                $threeMonthsAgoISO,
                $threeMonthsAgoISO
           );

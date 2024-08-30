@@ -433,7 +433,31 @@ require "views/home/components/header.php";
             </div>
             <?php
             $names = array(
-              "Med Hedi Samet", "Mahdi Gouiaa", "Siwar Gouirah", "Ameni Bensalah", "Ameni Harbi", "Amir Abid", "Aymen Ben Jdidia", "Cherif Yesmine", "Farah Abida", "Faten Bahri", "Hamza GHarsellaoui", "Islem Loued", "Iyed Rouabeh", "Jawhar Zribi", "Mayssa Jaballah",  "Mohamed Amine Charfi", "Mohamed Aziz", "Nour El Houda Laajili", "Rana Naifar", "Skander Hellal", "SO FI Ene", "Tasnim Elleuch", "Wiem Boujelben", "Yessine Fakhfakh", "Abderrahmen Marrakchi",
+              "Med Hedi Samet",
+              "Mahdi Gouiaa",
+              "Siwar Gouirah",
+              "Ameni Bensalah",
+              "Ameni Harbi",
+              "Amir Abid",
+              "Aymen Ben Jdidia",
+              "Cherif Yesmine",
+              "Farah Abida",
+              "Faten Bahri",
+              "Hamza GHarsellaoui",
+              "Islem Loued",
+              "Iyed Rouabeh",
+              "Jawhar Zribi",
+              "Mayssa Jaballah",
+              "Mohamed Amine Charfi",
+              "Mohamed Aziz",
+              "Nour El Houda Laajili",
+              "Rana Naifar",
+              "Skander Hellal",
+              "SO FI Ene",
+              "Tasnim Elleuch",
+              "Wiem Boujelben",
+              "Yessine Fakhfakh",
+              "Abderrahmen Marrakchi",
             );
             ?>
             <div class="row py-2 g-2 justify-content-start">
@@ -540,10 +564,41 @@ require "views/home/components/header.php";
             </div>
             <?php
             $names = array(
-              "Iheb Charfeddine", "Oussama Slimani", "Ameni Bensalah", "Aymen Ben Jdidia", "Cherif Yesmine", "Emna Ben Amor", "Eya Telmoudi", "Fadoua Yakoubi", "Farah Abida", "Hichem Kortli",  "Imene Bouaziz", "Islem Loued", "Iyed Rouabeh", "Jawhar Zribi", "Jellity Mayssa", "Maroua Majdoub", "Med Ksibi", "M. Amine Charfi", "Mohamed Aziz", "Mohamed Hakmouni", "Montaha Ammar", "Montaha Ben Amor", "Nada Belghith", "Nawress Gaaloul",
-              "Nour El Houda Laajili", "Ons Ben Salem",  "Oussema Ellouze", "Rahma Ben Jemaa",
-              "Rana Naifar", "Siwar Jomni", "SO FI Ene", "Tasnim Elleuch",
-              "Wiem Boujelben", "Yosser Msalmi", "Youssef Abdelhedi"
+              "Iheb Charfeddine",
+              "Oussama Slimani",
+              "Ameni Bensalah",
+              "Aymen Ben Jdidia",
+              "Cherif Yesmine",
+              "Emna Ben Amor",
+              "Eya Telmoudi",
+              "Fadoua Yakoubi",
+              "Farah Abida",
+              "Hichem Kortli",
+              "Imene Bouaziz",
+              "Islem Loued",
+              "Iyed Rouabeh",
+              "Jawhar Zribi",
+              "Jellity Mayssa",
+              "Maroua Majdoub",
+              "Med Ksibi",
+              "M. Amine Charfi",
+              "Mohamed Aziz",
+              "Mohamed Hakmouni",
+              "Montaha Ammar",
+              "Montaha Ben Amor",
+              "Nada Belghith",
+              "Nawress Gaaloul",
+              "Nour El Houda Laajili",
+              "Ons Ben Salem",
+              "Oussema Ellouze",
+              "Rahma Ben Jemaa",
+              "Rana Naifar",
+              "Siwar Jomni",
+              "SO FI Ene",
+              "Tasnim Elleuch",
+              "Wiem Boujelben",
+              "Yosser Msalmi",
+              "Youssef Abdelhedi"
             );
             ?>
             <div class="row py-2 g-2 justify-content-start">
