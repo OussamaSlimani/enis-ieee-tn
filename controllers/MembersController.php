@@ -389,4 +389,44 @@ class MembersController extends Controller
 			'notification' => $notification
 		]);
 	}
+
+	/* ################## pays  ################## */
+	public function pays()
+	{
+		$notification = ["success" => false, "message" => "Failed to process the request."];
+
+		if (isset($_GET['code'])) {
+			$code = $_GET['code'];
+
+			// Find the member by code
+			$member = $this->MembersModel->find($code);
+
+			if ($member) {
+				if (isset($member["pays"]) && $member["pays"] !== 'yes') {
+					$newPaysStatus = 'yes';
+					$data = ['pays' => $newPaysStatus];
+					$updateResult = $this->MembersModel->update($code, $data);
+
+					if ($updateResult) {
+						$notification = ["success" => true, "message" => "Member pays status updated!"];
+					} else {
+						$notification = ["success" => false, "message" => "Failed to update the pays status. Please try again later."];
+					}
+				} else {
+					$notification = ["success" => false, "message" => "Member has already been marked as paid!"];
+				}
+			} else {
+				$notification = ["success" => false, "message" => "Member not found."];
+			}
+		}
+
+		$members = $this->MembersModel->findBy([
+			'MembershipStatus' => 'Not Active',
+		]);
+
+		$this->render_view_secured('members/newMembers', [
+			'members' => $members,
+			'notification' => $notification
+		]);
+	}
 }
