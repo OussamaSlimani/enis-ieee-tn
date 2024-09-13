@@ -178,6 +178,9 @@ require "views/home/components/header.php";
         <a class="me-3" href="https://www.instagram.com/tec_week_1.0/" target="_blank">
           <i class="fab fa-instagram fa-2x text-white p-2 rounded-circle"></i>
         </a>
+        <a class="me-3" href="tecweek/index.html" target="_blank">
+          <i class="fa fa-globe fa-2x text-white p-2 rounded-circle"></i>
+        </a>
       </div>
     </div>
     <!-- Game Promotion Section -->

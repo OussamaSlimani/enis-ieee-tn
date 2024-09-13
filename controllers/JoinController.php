@@ -37,33 +37,52 @@ class JoinController extends Controller
      public function createNewAccount()
      {
           $notification = array("success" => false, "message" => "Error: Email and password not provided");
+
           if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                $email = $_POST['email'];
                $fullname = $_POST['fullname'];
                $password = $_POST['password'];
                $department = $_POST['department'];
+
                if (!empty($email) && !empty($fullname) && !empty($password) && !empty($department)) {
-                    $data = [
+                    $result = $this->JoinModel->findBy([
                          'Email' => $email,
                          'FullName' => $fullname,
                          'Password' => $password,
-                         'Department' => $department,
-                         'MembershipStatus' => 'Not Active',
-                    ];
-                    try {
-                         $lastInsertId = $this->JoinModel->create($data);
-                         if ($lastInsertId) {
-                              $notification = array("success" => true, "message" => "Member created successfully!");
+                         'Department' => $department
+                    ]);
+
+                    if (!empty($result)) {
+                         $notification = array("success" => false, "message" => "This account is already registered!");
+                    } else {
+                         $data = [
+                              'Email' => $email,
+                              'FullName' => $fullname,
+                              'Password' => $password,
+                              'Department' => $department,
+                              'MembershipStatus' => 'Not Active',
+                         ];
+
+                         try {
+                              $lastInsertId = $this->JoinModel->create($data);
+
+                              if ($lastInsertId) {
+                                   $notification = array("success" => true, "message" => "Account created successfully!");
+                              } else {
+                                   $notification = array("success" => false, "message" => "Account creation failed!");
+                              }
+                         } catch (PDOException $e) {
+                              $notification = array("success" => false, "message" => "Create failed: " . $e->getMessage());
                          }
-                    } catch (PDOException $e) {
-                         $notification = array("success" => false, "message" => "Create failed: " . $e->getMessage());
                     }
                } else {
-                    $notification['message'] = "Error: All fields are required.";
+                    $notification = array("success" => false, "message" => "Error: All fields are required.");
                }
           }
+
           $this->render_view('join/step1', ['notification' => $notification]);
      }
+
 
      // ==================== Verify Payment
      public function verifyPayment()
