@@ -12,12 +12,15 @@ $pays = array_filter($members, function ($member) {
      <div class="bg-light rounded-top p-4">
           <div class="row align-items-center">
                <div class="col-9">
-                    <h4 class="fw-semibold mb-8">New Members ( Total : <?php echo count($members); ?> - Who pays : <?php echo count($pays); ?> )</h4>
+                    <h4 class="fw-semibold mb-8">New Members</h4>
                     <nav aria-label="breadcrumb">
                          <ol class="breadcrumb">
-                              <li class="breadcrumb-item">Dashboard</li>
+                              <li class="breadcrumb-item">Total : <?php echo count($members); ?></li>
                               <li class="breadcrumb-item" aria-current="page">
-                                   List of new members
+                                   Who pays : <?php echo count($pays); ?>
+                              </li>
+                              <li class="breadcrumb-item" aria-current="page">
+                                   <a href="index.php?url=statistics">Statistics</a>
                               </li>
                          </ol>
                     </nav>
@@ -29,7 +32,6 @@ $pays = array_filter($members, function ($member) {
 
 
 <!-- ===================== members Start ===================== -->
-
 <div class="container-fluid pt-4 px-4">
      <div class="bg-light text-center rounded p-4">
           <!-- notification -->

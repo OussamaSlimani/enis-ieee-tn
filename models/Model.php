@@ -182,7 +182,6 @@ class Model
     public function join($firstTableColumns, $secondTableColumns, $firstColumnJoin, $secondColumnJoin, $secondTable, $joinType = 'INNER')
     {
         try {
-            // Prepare the column lists for SELECT clause
             $table1Cols = implode(', ', array_map(function ($col) {
                 return "{$this->table}.{$col}";
             }, $firstTableColumns));
@@ -191,21 +190,41 @@ class Model
                 return "{$secondTable}.{$col}";
             }, $secondTableColumns));
 
-            // Combine both column lists
             $columns = "{$table1Cols}, {$table2Cols}";
 
-            // Prepare the JOIN query
             $sql = "SELECT {$columns} FROM {$this->table} 
                     {$joinType} JOIN {$secondTable} 
                     ON {$this->table}.{$firstColumnJoin} = {$secondTable}.{$secondColumnJoin}";
 
-            // Execute the query
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             die("Join failed: " . $e->getMessage());
+        }
+    }
+
+    public function countAll($conditions = [])
+    {
+        try {
+            $whereClause = '';
+            $values = [];
+
+            if (!empty($conditions)) {
+                foreach ($conditions as $key => $value) {
+                    $whereClause .= "{$key} = ? AND ";
+                    $values[] = $value;
+                }
+                $whereClause = rtrim($whereClause, ' AND ');
+                $whereClause = "WHERE " . $whereClause;
+            }
+            $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM {$this->table} {$whereClause}");
+            $stmt->execute($values);
+
+            return $stmt->fetchColumn();
+        } catch (PDOException $e) {
+            die("Count query failed: " . $e->getMessage());
         }
     }
 }

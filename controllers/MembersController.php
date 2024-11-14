@@ -429,4 +429,99 @@ class MembersController extends Controller
 			'notification' => $notification
 		]);
 	}
+
+	/* ################## statistics of new members ################## */
+	public function statistics()
+	{
+		$newMembers = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+		]);
+		$pays = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'pays' => 'yes',
+		]);
+		$computer = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'computer engineering',
+		]);
+		$electrical = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'electrical engineering',
+		]);
+		$geo = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'geo-resources and environmental engineering',
+		]);
+		$electromechanical = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'electromechanical engineering',
+		]);
+		$materials = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'materials engineering',
+		]);
+		$biological = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'biological engineering',
+		]);
+		$civil = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'civil engineering',
+		]);
+
+		$computerPay = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'computer engineering',
+			'pays' => 'yes',
+		]);
+		$electricalPay = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'electrical engineering',
+			'pays' => 'yes',
+		]);
+		$geoPay = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'geo-resources and environmental engineering',
+			'pays' => 'yes',
+		]);
+		$electromechanicalPay = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'electromechanical engineering',
+			'pays' => 'yes',
+		]);
+		$materialsPay = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'materials engineering',
+			'pays' => 'yes',
+		]);
+		$biologicalPay = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'biological engineering',
+			'pays' => 'yes',
+		]);
+		$civilPay = $this->MembersModel->countAll([
+			'MembershipStatus' => 'Not Active',
+			'Department' => 'civil engineering',
+			'pays' => 'yes',
+		]);
+
+		$this->render_view_secured('members/statistics', [
+			'newMembers' => $newMembers,
+			'pays' => $pays,
+			'computer' => $computer,
+			'electrical' => $electrical,
+			'geo' => $geo,
+			'electromechanical' => $electromechanical,
+			'materials' => $materials,
+			'biological' => $biological,
+			'civil' => $civil,
+			'computerPay' => $computerPay,
+			'electricalPay' => $electricalPay,
+			'geoPay' => $geoPay,
+			'electromechanicalPay' => $electromechanicalPay,
+			'materialsPay' => $materialsPay,
+			'biologicalPay' => $biologicalPay,
+			'civilPay' => $civilPay,
+		]);
+	}
 }

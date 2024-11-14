@@ -142,10 +142,9 @@ require "views/home/components/header.php";
 <!-- ========== Facts End ========== -->
 
 
-<!-- ========== Tec Week Counter Start ========== -->
+<!-- ========== Tec Week Counter Start
 <div class="container p-4 rounded-4 text-white space-bg wow fadeInUp">
   <div class="row g-4">
-    <!-- Event Details Section -->
     <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center text-center">
       <div class="pb-4 wow zoomIn" data-wow-delay="0.5s">
         <img src="assets/tecweek/tecweek-2.png" alt="TEC Week Logo" class="img-fluid" style="width: 80%;" />
@@ -183,7 +182,6 @@ require "views/home/components/header.php";
         </a>
       </div>
     </div>
-    <!-- Game Promotion Section -->
     <div class="col-lg-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.5s">
       <div class="p-4 bg-dark rounded-4">
         <div class="position-relative pb-3 mb-3">
@@ -198,10 +196,9 @@ require "views/home/components/header.php";
         <a class="btn btn-primary rounded-pill py-2 px-4 mb-3 wow rubberBand" data-wow-delay="3s" href="index.php?url=game" target="_blank">Play the Game</a>
       </div>
     </div>
-    <!-- Game Promotion Section -->
   </div>
 </div>
-<!-- ========== Tec Week Counter End ========== -->
+Tec Week Counter End ========== -->
 
 
 <!-- ========== About Start ========== -->

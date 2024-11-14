@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "type": "events",
+      "id": "418854",
+      "attributes": {
+        "id": 418854,
+        "title": "DEVOPS CLOUD ACADEMY BOOTCAMP - FIRST SESSION: INTRODUCTION TO DEVOPS",
+        "description": "\u003Ctable style=\"border-collapse: collapse; width: 99.9808%; border-width: 0px;\" border=\"1\"\u003E\u003Ccolgroup\u003E\u003Ccol style=\"width: 49.9521%;\"\u003E\u003Ccol style=\"width: 49.9521%;\"\u003E\u003C/colgroup\u003E\r\n\u003Ctbody\u003E\r\n\u003Ctr\u003E\r\n\u003Ctd style=\"border-width: 0px; text-align: left; vertical-align: top;\"\u003E\r\n\u003Cp dir=\"ltr\"\u003EThe first session of the \u003Cstrong\u003E\u003Cspan style=\"color: rgb(186, 55, 42);\"\u003EDevOps Cloud Academy Bootcamp\u003C/span\u003E\u003C/strong\u003E, a joint effort between \u003Cspan style=\"color: rgb(45, 194, 107);\"\u003E\u003Cstrong\u003EIEEE IAS ENIS SBC\u003C/strong\u003E\u003C/span\u003E and \u003Cstrong\u003E\u003Cspan style=\"color: rgb(22, 145, 121);\"\u003EIEEE IAS PES ENIT SBJC\u003C/span\u003E\u003C/strong\u003E, set a promising tone with an engaging online \u003Cstrong\u003Eintroduction to\u003C/strong\u003E \u003Cspan style=\"color: rgb(35, 111, 161);\"\u003E\u003Cstrong\u003EDevOps\u003C/strong\u003E \u003C/span\u003Eled by \u003Cstrong\u003EAssil Bouaziz\u003C/strong\u003E. This eagerly anticipated session marked the beginning of a transformative journey into the world of \u003Cspan style=\"color: rgb(35, 111, 161);\"\u003E\u003Cstrong\u003EDevOps\u003C/strong\u003E\u003C/span\u003E&mdash;a modern approach to software development and deployment.\u003C/p\u003E\r\n\u003Cp dir=\"ltr\"\u003EParticipants learned about the core concepts of \u003Cspan style=\"color: rgb(35, 111, 161);\"\u003E\u003Cstrong\u003EDevOps\u003C/strong\u003E\u003C/span\u003E, including the importance of collaboration between development and operations teams, the benefits of automation in work processes, and the \u003Cspan style=\"color: rgb(52, 73, 94);\"\u003Ecultural\u003C/span\u003E changes necessary for successful implementation. \u003Cstrong\u003EAssil \u003C/strong\u003Edidn't just talk about theories; he showed real examples and stories. This helped everyone see how \u003Cspan style=\"color: rgb(35, 111, 161);\"\u003E\u003Cstrong\u003EDevOps \u003C/strong\u003E\u003C/span\u003Ecan make companies faster, more efficient, and more innovative.\u003C/p\u003E\r\n\u003Cp dir=\"ltr\"\u003EThe session fostered an interactive learning environment, encouraging active participation and discussion among attendees. As a result, everyone left with a good understanding of what \u003Cstrong\u003E\u003Cspan style=\"color: rgb(35, 111, 161);\"\u003EDevOps \u003C/span\u003E\u003C/strong\u003Eis all about, ready for further learning in the bootcamp.\u003C/p\u003E\r\n\u003Cp dir=\"ltr\"\u003EOverall, the online session proved to be a successful and enriching kickoff to the \u003Cspan style=\"color: rgb(186, 55, 42);\"\u003E\u003Cstrong\u003EDevOps Cloud Academy Bootcamp\u003C/strong\u003E\u003C/span\u003E, setting the stage for deeper exploration and learning in \u003Cspan style=\"color: rgb(52, 73, 94);\"\u003E\u003Cstrong\u003E\u003Cspan style=\"color: rgb(35, 111, 161);\"\u003EDevOps\u003C/span\u003E \u003C/strong\u003E\u003C/span\u003Epractices and principles.\u003C/p\u003E\r\n\u003Cstrong id=\"docs-internal-guid-51f43f75-7fff-59f9-b8f9-76e3a751c209\"\u003E\u003C/strong\u003E\u003C/td\u003E\r\n\u003Ctd style=\"border-width: 0px;\"\u003E\u003Cimg src=\"https://events.vtools.ieee.org/vtools_ui/media/display/027e6329-b2ab-4bdc-9b85-66dae7060408\" width=\"560\"\u003E\u003C/td\u003E\r\n\u003C/tr\u003E\r\n\u003C/tbody\u003E\r\n\u003C/table\u003E",
+        "start-time": "2024-04-18T19:00:00.000Z",
+        "end-time": "2024-04-18T22:30:00.000Z",
+        "time-zone": {
+          "name": "Europe/London",
+          "utc-offset": 0
+        },
+        "primary-host": {
+          "spoid": "SBC03301H",
+          "name": "National Engineering School of Sfax,IA34",
+          "class_code": "SUBT",
+          "class_description": "Technical SPO",
+          "type_code": "BRCH",
+          "type_description": "Student Branch Chapter",
+          "section_spoids": "R80114",
+          "region_spoids": "R8",
+          "society_spoids": "IA034"
+        },
+        "cohosts": [
+          {
+            "spoid": "SBC17411",
+            "name": "Ecole Nationale D'Ingenieurs De Tunis,PE31/IA34",
+            "class_code": "SUBT",
+            "class_description": "Technical SPO",
+            "type_code": "BRCH",
+            "type_description": "Student Branch Chapter",
+            "section_spoids": "R80114",
+            "region_spoids": "R8",
+            "society_spoids": "PE031,IA034"
+          }
+        ],
+        "header": "",
+        "footer": "",
+        "keywords": "#DevOps #DevOps_Cloud_Academy #Bootcamp #IAS #ieee_ias_enis_sbc #ieee_ias_enit_sbc ",
+        "agenda": null,
+        "contact-email": "imene.bouaziz@ieee.org",
+        "contact-display": "",
+        "cosponsor-name": "",
+        "location-type": "virtual",
+        "virtual-info": "\u003Cp\u003Evia Google Meet\u003C/p\u003E",
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "postal-code": null,
+        "building": null,
+        "room-number": null,
+        "map-url": null,
+        "latitude": null,
+        "longitude": null,
+        "image": null,
+        "image-mime-type": null,
+        "registration-start-time": null,
+        "registration-end-time": null,
+        "registration-url": null,
+        "survey-url": "",
+        "cost": false,
+        "max-registrations": null,
+        "cancelled": false,
+        "uid": "7FFC09C8-722F-4684-A80B-07FA57A2D0D0",
+        "publish": true,
+        "virtual": true,
+        "link": "https://events.vtools.ieee.org/m/418854",
+        "ieee-attending": 60,
+        "guests-attending": 8,
+        "created-at": "2024-04-26T16:14:48.000Z",
+        "updated-at": "2024-05-11T16:53:19.000Z",
+        "speakers": null,
+        "pricing": null
+      },
+      "relationships": {
+        "state": {
+          "data": null
+        },
+        "country": {
+          "data": null
+        },
+        "category": {
+          "data": {
+            "type": "categories",
+            "id": "2"
+          }
+        },
+        "subcategory": {
+          "data": null
+        },
+        "menus": {
+          "data": []
+        }
+      }
+    }
+  ],
+  "meta": {
+    "version": "vTools Api::V4",
+    "messages": [],
+    "paging": {
+      "page": 1,
+      "limit": 500,
+      "total_pages": 1
+    }
+  },
+  "included": [
+    {
+      "type": "categories",
+      "id": "2",
+      "attributes": {
+        "id": 2,
+        "name": "Technical",
+        "archived": false,
+        "subcategories": []
+      }
+    }
+  ]
+}

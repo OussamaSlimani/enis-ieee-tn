@@ -48,6 +48,7 @@ $router->addRoute('delete_new_member', 'MembersController', 'delete_new_member')
 $router->addRoute('search_new_member', 'MembersController', 'search_new_member');
 $router->addRoute('payment_new_member', 'MembersController', 'payment_new_member');
 $router->addRoute('pays', 'MembersController', 'pays');
+$router->addRoute('statistics', 'MembersController', 'statistics');
 
 $router->addRoute('renew_members', 'MembersController', 'renew_members');
 $router->addRoute('search_renew_member', 'MembersController', 'search_renew_member');
