@@ -60,7 +60,7 @@ require "views/home/components/header.php";
               <input type="ieeeEmail" id="ieeeEmail" name="ieeeEmail" class="form-control" required />
             </div>
             <div class="col-12">
-              <label for="email" class="control-label text-dark">Email used for IEEE account</label>
+              <label for="email" class="control-label text-dark">Email used to create IEEE account (Step 1)</label>
               <input type="email" id="email" name="email" class="form-control" required />
             </div>
             <div class="col-12">

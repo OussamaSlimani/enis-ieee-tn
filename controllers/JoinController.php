@@ -130,7 +130,6 @@ class JoinController extends Controller
 
                     $result = $this->JoinModel->findBy([
                          'Email' => $email,
-                         'Password' => $password,
                          'MembershipStatus' => 'Active'
                     ]);
 
@@ -138,8 +137,7 @@ class JoinController extends Controller
                          $result = $result[0];
                          $updateData = [
                               'IeeeNumber' => $ieeeNumber,
-                              'Email' => $email,
-                              'IeeeEmail' => $ieeeEmail,
+                              'Email' => $ieeeEmail,
                               'Password' => $password
                          ];
                          $updateResult = $this->JoinModel->update($result['MemberId'], $updateData);
