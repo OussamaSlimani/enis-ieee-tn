@@ -18,142 +18,93 @@ require "views/home/components/header.php";
 </div>
 <!-- ==========  banner End ========== -->
 
-<!-- =======  awards start ======= -->
+<?php
+$awards = [
+  [
+    'title' => 'R8 WIE Student Affinity Group of the Year',
+    'subtitle' => 'IEEE WIE ENIS SAG',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'R8 Outstanding WIE Student Volunteer',
+    'subtitle' => 'Nadine Jellali',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'Highest Score in the IEEE TryEngineering',
+    'subtitle' => 'IEEE WIE ENIS SAG',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'Darrel Chong Student Activity - Bronze',
+    'subtitle' => 'WIE Annual Congress of Tunisia 2.0',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'Darrel Chong Student Activity - Bronze',
+    'subtitle' => 'HELLO WORLD 3.0!',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'IEEE SSCS Student Branch Chapter of the Year Award',
+    'subtitle' => 'IEEE SSCS ENIS SBC',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'Outstanding Large IAS Chapter',
+    'subtitle' => 'IEEE IAS ENIS SBC',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'IEEE IAS Humanitarian Award Contest',
+    'subtitle' => 'First Place',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'IEEE IAS CMD Outstanding Member',
+    'subtitle' => 'Amir Abid',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'IEEE IAS CMD Chapter Award for Best Website',
+    'subtitle' => 'First Place',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'IEEE STEM Champion',
+    'subtitle' => 'Bilel Djemel',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'IEEE Regional Exemplary Student Branch',
+    'subtitle' => 'IEEE ENIS SB',
+    'year' => '2023'
+  ]
+];
+
+?>
+
+<!-- ======= awards start ======= -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
   <div class="container py-5">
     <div class="row g-5">
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
+      <?php foreach ($awards as $award): ?>
+        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+          <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
+            <div class="service-icon">
+              <i class="fas fa-award text-white"></i>
+            </div>
+            <h4 class="mb-2 text-dark"><?php echo $award['title']; ?></h4>
+            <h5 class="mb-2 text-dark"><?php echo $award['subtitle']; ?></h5>
+            <p class="m-0 text-dark"><?php echo $award['year']; ?></p>
           </div>
-          <h4 class="mb-2 text-dark">Outstanding Large IAS Chapter</h4>
-          <p class="m-0 text-dark">2024</p>
         </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">IEEE IAS Humanitarian Award Contest</h4>
-          <h5 class="mb-2 text-dark">First place</h5>
-          <p class="m-0 text-dark">2024</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">IEEE IAS CMD Outstanding Member</h4>
-          <h5 class="mb-2 text-dark">Amir Abid</h5>
-          <p class="m-0 text-dark">2024</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">IEEE IAS CMD Chapter Award for Best Website</h4>
-          <h5 class="mb-2 text-dark">First place</h5>
-          <p class="m-0 text-dark">2024</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">IEEE STEM Champion</h4>
-          <h5 class="mb-2 text-dark">Bilel Djemel</h5>
-          <p class="m-0 text-dark">2024</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">
-            Outstanding IEEE WIE Student Affinity Group (SAG)
-          </h4>
-          <h5 class="mb-2 text-dark">First place</h5>
-          <p class="m-0 text-dark">2023</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">PCB-PM TSYP Challenge</h4>
-          <h5 class="mb-2 text-dark">Third place</h5>
-          <p class="m-0 text-dark">2023</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">TSYP Booth Challenge</h4>
-          <h5 class="mb-2 text-dark">Third place</h5>
-          <p class="m-0 text-dark">2023</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">TSYP PES Challenge</h4>
-          <h5 class="mb-2 text-dark">First place</h5>
-          <p class="m-0 text-dark">2023</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">
-            IEEE Day Video Contest Judges’ Pick
-          </h4>
-          <h5 class="mb-2 text-dark">First place</h5>
-          <p class="m-0 text-dark">2023</p>
-        </div>
-      </div>
-      <!-- Award -->
-      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-        <div class="service-item bg-light-mode rounded d-flex flex-column align-items-center justify-content-center text-center">
-          <div class="service-icon">
-            <i class="fas fa-award text-white"></i>
-          </div>
-          <h4 class="mb-2 text-dark">
-            IEEE Regional Exemplary Student Branch
-          </h4>
-          <p class="m-0 text-dark">2023</p>
-        </div>
-      </div>
-      <!-- Award -->
+      <?php endforeach; ?>
     </div>
   </div>
 </div>
+<!-- ======= awards end ======= -->
 
-<!-- =======  awards end ======= -->
 
 <?php
 require "views/home/components/footer.php";
