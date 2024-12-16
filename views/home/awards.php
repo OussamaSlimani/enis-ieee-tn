@@ -21,6 +21,16 @@ require "views/home/components/header.php";
 <?php
 $awards = [
   [
+    'title' => 'Honorable Mention for the IEEE WIE SBAG of the Year',
+    'subtitle' => 'IEEE WIE ENIS SAG',
+    'year' => '2024'
+  ],
+  [
+    'title' => 'IEEE SSCS Student Shirt Design Contest',
+    'subtitle' => 'Hend Belkhiria',
+    'year' => '2024'
+  ],
+  [
     'title' => 'R8 WIE Student Affinity Group of the Year',
     'subtitle' => 'IEEE WIE ENIS SAG',
     'year' => '2024'
